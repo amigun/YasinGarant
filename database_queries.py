@@ -6,10 +6,10 @@ sql = db.cursor()
 
 def user_reg(**kwargs):
     user_id = list(kwargs.items())[0][1]
-    sql.execute(f"SELECT id_user FROM users WHERE id_user = '{user_id}'")
+    sql.execute(f"SELECT id FROM users WHERE id = {user_id}")
 
     if sql.fetchone() is None:
-        sql.execute("INSERT INTO users VALUES (id)", (user_id))
+        sql.execute("INSERT INTO users (id) VALUES (?)", (user_id))
         db.commit()
 
         return 1
