@@ -26,7 +26,8 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 
 @dp.message_handler(commands=['start'], state='*')
 async def start(msg: types.Message):
-    await bot.send_message(msg.from_user.id, messages.greeting)
+    print(f'\nText: {messages.get("greeting", first_name=msg.from_user.first_name)}')
+    await bot.send_message(msg.from_user.id, messages.get('greeting', first_name=msg.from_user.first_name))
 
     dq.user_reg(user_id=msg.from_user.id)
 
