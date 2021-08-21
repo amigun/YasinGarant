@@ -29,3 +29,6 @@ async def start(msg: types.Message):
     await bot.send_message(msg.from_user.id, messages.greeting)
 
     dq.user_reg(user_id=msg.from_user.id)
+
+if __name__ == '__main__':
+    executor.start_polling(dp)
