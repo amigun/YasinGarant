@@ -8,7 +8,6 @@ from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButt
 from aiogram.utils.callback_data import CallbackData
 from loguru import logger as log
 import database_queries as dq
-import sqlite3
 import config, messages
 
 # Enabled logging
