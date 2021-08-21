@@ -1,3 +1,5 @@
+import sqlite3
+
 # Enabled DB
 db = sqlite3.connect('resources/database.db', check_same_thread=False)
 sql = db.cursor()
