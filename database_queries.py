@@ -15,3 +15,13 @@ def user_reg(**kwargs):
         return 1
 
     return 0
+
+def user_status(**kwargs):
+    user_id = list(kwargs.items())[0][1]
+    sql.execute(f"SELECT status FROM users WHERE id = {user_id}")
+    return sql.fetchone()[0]
+
+def user_info(**kwargs):
+    user_id = list(kwargs.items())[0][1]
+    sql.execute(f"SELECT * FROM users WHERE id = {user_id}")
+    return sql.fetchone()
