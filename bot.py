@@ -43,6 +43,30 @@ async def help(msg: types.Message):
     await bot.send_message(msg.from_user.id, messages.get('help'))
     log.info(f'User {msg.from_user.id} send /help command')
 
+@dp.message_handler(commands=['admin'], state='*')
+async def admin(msg: types.Message):
+    password = msg.get_args()
+
+    if password == config.PASSWORD_ADMIN:
+        dq.admin(user_id=msg.from_user.id)
+
+        await bot.send_message(msg.from_user.id, messages.get('you_admin'))
+        log.info(f'User {msg.from_user.id} became an admin')
+    else:
+        log.info(f'User {msg.from_user.id} send /admin command, but password is not true')
+
+@dp.message_handler(commands=['arbitr'], state='*')
+async def arbitr(msg: types.Message):
+    password = msg.get_args()
+
+    if password == config.PASSWORD_ARBITR:
+        dq.arbitr(user_id=msg.from_user.id)
+
+        await bot.send_message(msg.from_user.id, messages.get('you_arbitr'))
+        log.info(f'User {msg.from_user.id} became an arbitr')
+    else:
+        log.info(f'User {msg.from_user.id} send /arbitr command, but password is not true')
+
 @dp.message_handler(state=States.main_menu)
 async def main_menu(msg: types.Message):
     if msg.text == "💬 Помощь":
