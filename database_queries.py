@@ -23,7 +23,10 @@ def user_status(**kwargs):
 
 def user_info(**kwargs):
     user_id = list(kwargs.items())[0][1]
-    sql.execute(f"SELECT * FROM users WHERE id = {user_id}")
+    try:
+        sql.execute(f"SELECT * FROM users WHERE id = {user_id}")
+    except sqlite3.OperationalError:
+        return 1
     return sql.fetchone()
 
 def admin(**kwargs):

@@ -20,6 +20,7 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 # Init states
 class States(StatesGroup):
     main_menu = State()
+    find_user = State()
 
 @dp.message_handler(commands=['start'], state='*')
 async def start(msg: types.Message):
@@ -72,11 +73,37 @@ async def main_menu(msg: types.Message):
     if msg.text == "💬 Помощь":
         await bot.send_message(msg.from_user.id, messages.get('help'))
         log.info(f'User {msg.from_user.id} click on "Help" button')
-    if msg.text == "👤 Мой профиль":
+    elif msg.text == "👤 Мой профиль":
         user_info = dq.user_info(user_id=msg.from_user.id)
 
-        await bot.send_message(msg.from_user.id, messages.get('account', user_info=user_info), parse_mode="MarkdownV2")
+        await bot.send_message(msg.from_user.id, messages.get('account', user_info=user_info, user_status='self'), parse_mode='MarkdownV2')
         log.info(f'User {msg.from_user.id} click on "My profile" button')
+    elif msg.text == "🔍 Найти пользователя":
+        await bot.send_message(msg.from_user.id, messages.get('input_user_id'))
+        await States.find_user.set()
+        log.info(f'User {msg.from_user.id} want to find an user')
+
+@dp.message_handler(state=States.find_user)
+async def find_user(msg: types.Message):
+    user_info = dq.user_info(user_id=msg.text)
+    if msg.text == '⬅️ Назад':
+        user_status = dq.user_status(user_id=msg.from_user.id)
+
+        if user_status == 0:
+            await bot.send_message(msg.from_user.id, messages.get('main_menu'), reply_markup=keyboards.main_menu__kb_user)
+        if user_status == 1:
+            await bot.send_message(msg.from_user.id, messages.get('main_menu'), reply_markup=keyboards.main_menu__kb_arbitr)
+        if user_status == 2:
+            await bot.send_message(msg.from_user.id, messages.get('main_menu'), reply_markup=keyboards.main_menu__kb_admin)
+
+        await States.main_menu.set()
+        log.info(f'User {msg.from_user.id} back to main menu')
+    elif user_info != 1:
+        await bot.send_message(msg.from_user.id, messages.get('account', user_info=user_info, user_status='finder'), reply_markup=keyboards.back__kb, parse_mode='MarkdownV2')
+        log.info(f'User {msg.from_user.id} find user {msg.text}')
+    elif user_info == 1:
+        await bot.send_message(msg.from_user.id, messages.get('user_not_find'), reply_markup=keyboards.back__kb)
+        log.info(f'User {msg.from_user.id} try to find user {msg.text}, but he can\'t')
 
 if __name__ == '__main__':
     executor.start_polling(dp)
