@@ -113,3 +113,62 @@
 2021-08-22T15:20:51.524341+0500 User 625834898 click on "My profile" button
 2021-08-22T15:21:36.903528+0500 User 625834898 want to find an user
 2021-08-22T15:34:52.031350+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T16:20:35.173823+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T16:20:48.234368+0500 User 625834898 click on "My profile" button
+2021-08-22T16:21:12.316770+0500 User 625834898 became an admin
+2021-08-22T16:21:26.271862+0500 User 625834898 became an arbitr
+2021-08-22T18:08:03.714589+0500 User 625834898 want to find an user
+2021-08-22T18:11:45.249505+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:11:51.898839+0500 User 625834898 want to find an user
+2021-08-22T18:13:24.060978+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:13:27.846772+0500 User 625834898 want to find an user
+2021-08-22T18:14:58.164871+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:15:02.236248+0500 User 625834898 want to find an user
+2021-08-22T18:16:00.533188+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:16:04.199589+0500 User 625834898 want to find an user
+2021-08-22T18:17:09.015971+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:17:13.344687+0500 User 625834898 want to find an user
+2021-08-22T18:17:34.419746+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:17:38.285093+0500 User 625834898 want to find an user
+2021-08-22T18:18:12.091108+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:18:14.970918+0500 User 625834898 want to find an user
+2021-08-22T18:19:47.197337+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T18:19:50.355985+0500 User 625834898 want to find an user
+2021-08-22T18:19:51.162916+0500 User 625834898 try to find user 123, but he can't
+2021-08-22T18:19:53.471029+0500 User 625834898 try to find user 123, but he can't
+2021-08-22T18:19:55.251696+0500 User 625834898 try to find user 4324234234, but he can't
+2021-08-22T18:20:02.904937+0500 User 625834898 find user 1204343862
+2021-08-22T18:20:32.977008+0500 User 625834898 try to find user 243423, but he can't
+2021-08-22T18:20:34.083616+0500 User 625834898 back to main menu
+2021-08-22T18:20:34.235521+0500 User 625834898 try to find user ⬅️ Назад, but he can't
+2021-08-22T18:23:03.800466+0500 User 625834898 want to find an user
+2021-08-22T18:23:09.076584+0500 User 625834898 find user 1204343862
+2021-08-22T18:23:12.267065+0500 User 625834898 back to main menu
+2021-08-22T18:23:12.373428+0500 User 625834898 try to find user ⬅️ Назад, but he can't
+2021-08-22T22:02:21.175509+0500 User 625834898 click on "Help" button
+2021-08-22T22:02:22.683077+0500 User 625834898 click on "My profile" button
+2021-08-22T22:02:24.715221+0500 User 625834898 want to find an user
+2021-08-22T22:02:30.199166+0500 User 625834898 try to find user 3453453, but he can't
+2021-08-22T22:02:32.694185+0500 User 625834898 back to main menu
+2021-08-22T22:02:32.811138+0500 User 625834898 try to find user ⬅️ Назад, but he can't
+2021-08-22T22:11:25.152658+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T22:11:30.024090+0500 User 625834898 click on "My profile" button
+2021-08-22T22:11:35.145124+0500 User 625834898 want to find an user
+2021-08-22T22:11:47.121480+0500 User 625834898 find user 1204343862
+2021-08-22T22:11:49.799877+0500 User 625834898 back to main menu
+2021-08-22T22:11:49.918665+0500 User 625834898 try to find user ⬅️ Назад, but he can't
+2021-08-22T22:12:33.127409+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-22T22:12:39.468987+0500 User 625834898 click on "My profile" button
+2021-08-22T22:12:40.525392+0500 User 625834898 want to find an user
+2021-08-22T22:12:42.635118+0500 User 625834898 find user 1204343862
+2021-08-22T22:12:44.489142+0500 User 625834898 back to main menu
+2021-08-22T22:12:45.745078+0500 User 625834898 want to find an user
+2021-08-22T22:12:49.795151+0500 User 625834898 try to find user 3241234123412341234134, but he can't
+2021-08-22T22:12:53.205515+0500 User 625834898 try to find user 3q41234, but he can't
+2021-08-22T22:13:12.183516+0500 User 625834898 try to find user asdfasdfadfs, but he can't
+2021-08-22T22:13:13.352117+0500 User 625834898 find user 1204343862
+2021-08-22T22:13:15.398317+0500 User 625834898 back to main menu
+2021-08-22T22:13:23.062363+0500 User 625834898 click on "Help" button
+2021-08-22T22:13:26.085556+0500 User 625834898 click on "My profile" button
+2021-08-22T22:13:33.671417+0500 User 625834898 want to find an user
+2021-08-22T22:13:38.294206+0500 User 625834898 find user 1204343862

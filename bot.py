@@ -51,7 +51,7 @@ async def admin(msg: types.Message):
     if password == config.PASSWORD_ADMIN:
         dq.admin(user_id=msg.from_user.id)
 
-        await bot.send_message(msg.from_user.id, messages.get('you_admin'))
+        await bot.send_message(msg.from_user.id, messages.get('you_admin'), reply_markup=keyboards.main_menu__kb_admin)
         log.info(f'User {msg.from_user.id} became an admin')
     else:
         log.info(f'User {msg.from_user.id} send /admin command, but password is not true')
@@ -63,7 +63,7 @@ async def arbitr(msg: types.Message):
     if password == config.PASSWORD_ARBITR:
         dq.arbitr(user_id=msg.from_user.id)
 
-        await bot.send_message(msg.from_user.id, messages.get('you_arbitr'))
+        await bot.send_message(msg.from_user.id, messages.get('you_arbitr'), reply_markup=keyboards.main_menu__kb_arbitr)
         log.info(f'User {msg.from_user.id} became an arbitr')
     else:
         log.info(f'User {msg.from_user.id} send /arbitr command, but password is not true')
@@ -86,6 +86,7 @@ async def main_menu(msg: types.Message):
 @dp.message_handler(state=States.find_user)
 async def find_user(msg: types.Message):
     user_info = dq.user_info(user_id=msg.text)
+
     if msg.text == '⬅️ Назад':
         user_status = dq.user_status(user_id=msg.from_user.id)
 
@@ -98,12 +99,12 @@ async def find_user(msg: types.Message):
 
         await States.main_menu.set()
         log.info(f'User {msg.from_user.id} back to main menu')
-    elif user_info != 1:
-        await bot.send_message(msg.from_user.id, messages.get('account', user_info=user_info, user_status='finder'), reply_markup=keyboards.back__kb, parse_mode='MarkdownV2')
-        log.info(f'User {msg.from_user.id} find user {msg.text}')
-    elif user_info == 1:
+    elif user_info == 1 or user_info == None:
         await bot.send_message(msg.from_user.id, messages.get('user_not_find'), reply_markup=keyboards.back__kb)
         log.info(f'User {msg.from_user.id} try to find user {msg.text}, but he can\'t')
+    elif user_info != 1 or user_info != None:
+        await bot.send_message(msg.from_user.id, messages.get('account', user_info=user_info, user_status='finder'), reply_markup=keyboards.back__kb, parse_mode='MarkdownV2')
+        log.info(f'User {msg.from_user.id} find user {msg.text}')
 
 if __name__ == '__main__':
     executor.start_polling(dp)
