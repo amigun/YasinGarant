@@ -18,23 +18,23 @@ def user_reg(**kwargs):
 
 def user_status(**kwargs):
     user_id = list(kwargs.items())[0][1]
-    sql.execute(f"SELECT status FROM users WHERE id = {user_id}")
+    sql.execute(f"SELECT status FROM users WHERE id = ?", (user_id,))
     return sql.fetchone()[0]
 
 def user_info(**kwargs):
     user_id = list(kwargs.items())[0][1]
     try:
-        sql.execute(f"SELECT * FROM users WHERE id = {user_id}")
+        sql.execute(f"SELECT * FROM users WHERE id = ?", (user_id,))
     except sqlite3.OperationalError:
         return 1
     return sql.fetchone()
 
 def admin(**kwargs):
     user_id = list(kwargs.items())[0][1]
-    sql.execute(f"UPDATE users SET status = 2 WHERE id = {user_id}")
+    sql.execute(f"UPDATE users SET status = 2 WHERE id = ?", (user_id,))
     db.commit()
 
 def arbitr(**kwargs):
     user_id = list(kwargs.items())[0][1]
-    sql.execute(f"UPDATE users SET status = 1 WHERE id = {user_id}")
+    sql.execute(f"UPDATE users SET status = 1 WHERE id = ?", (user_id,))
     db.commit()
