@@ -485,3 +485,119 @@
 2021-08-24T17:31:51.471958+0500 User 625834898 write a condition for deal
 2021-08-24T17:31:52.763106+0500 User 625834898 write a price for deal
 2021-08-24T17:31:55.858448+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:20:01.468366+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:20:14.440671+0500 User 625834898 click on "My profile" button
+2021-08-24T18:20:16.696498+0500 User 625834898 want to find an user
+2021-08-24T18:20:18.174767+0500 User 625834898 find user 625834898
+2021-08-24T18:20:20.276786+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:20:23.517436+0500 User 625834898 write a condition for deal
+2021-08-24T18:20:25.272143+0500 User 625834898 write a price for deal
+2021-08-24T18:22:26.561944+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:22:37.758086+0500 User 625834898 want to find an user
+2021-08-24T18:22:38.971592+0500 User 625834898 find user 625834898
+2021-08-24T18:22:41.512564+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:22:43.211894+0500 User 625834898 write a condition for deal
+2021-08-24T18:22:46.411286+0500 User 625834898 write a price for deal
+2021-08-24T18:24:02.765779+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:24:06.906279+0500 User 625834898 want to find an user
+2021-08-24T18:24:12.054279+0500 User 625834898 find user 625834898
+2021-08-24T18:24:14.284940+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:24:19.650125+0500 User 625834898 write a condition for deal
+2021-08-24T18:24:21.809295+0500 User 625834898 write a price for deal
+2021-08-24T18:24:23.336016+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:31:00.244695+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:31:13.753063+0500 User 625834898 want to find an user
+2021-08-24T18:31:16.465819+0500 User 625834898 find user 625834898
+2021-08-24T18:31:18.272727+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:31:20.983182+0500 User 625834898 write a condition for deal
+2021-08-24T18:31:22.653054+0500 User 625834898 write a price for deal
+2021-08-24T18:31:25.312253+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:32:17.045282+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:32:23.445494+0500 User 625834898 want to find an user
+2021-08-24T18:32:24.355152+0500 User 625834898 find user 625834898
+2021-08-24T18:32:26.566717+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:32:29.740957+0500 User 625834898 write a condition for deal
+2021-08-24T18:32:31.020727+0500 User 625834898 write a price for deal
+2021-08-24T18:32:32.333273+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:33:38.341531+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:33:47.240433+0500 User 625834898 want to find an user
+2021-08-24T18:33:48.303993+0500 User 625834898 find user 625834898
+2021-08-24T18:33:49.528453+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:33:51.304898+0500 User 625834898 write a condition for deal
+2021-08-24T18:33:52.131289+0500 User 625834898 write a price for deal
+2021-08-24T18:33:53.778598+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:34:16.319765+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:34:20.365705+0500 User 625834898 want to find an user
+2021-08-24T18:34:21.193743+0500 User 625834898 find user 625834898
+2021-08-24T18:34:22.341974+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:34:23.272027+0500 User 625834898 write a condition for deal
+2021-08-24T18:34:24.187826+0500 User 625834898 write a price for deal
+2021-08-24T18:34:25.300733+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:35:41.885012+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:35:47.959279+0500 User 625834898 want to find an user
+2021-08-24T18:35:49.181277+0500 User 625834898 find user 625834898
+2021-08-24T18:35:50.376530+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:35:51.651268+0500 User 625834898 write a condition for deal
+2021-08-24T18:35:52.599247+0500 User 625834898 write a price for deal
+2021-08-24T18:35:53.837492+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:43:06.349104+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:43:18.424899+0500 User 625834898 want to find an user
+2021-08-24T18:43:20.004714+0500 User 625834898 find user 625834898
+2021-08-24T18:43:21.761930+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:43:24.067433+0500 User 625834898 write a condition for deal
+2021-08-24T18:43:25.971674+0500 User 625834898 write a price for deal
+2021-08-24T18:43:27.541030+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:43:46.497826+0500 User 954448371 was registred
+2021-08-24T18:43:56.263937+0500 User 954448371 click on "My profile" button
+2021-08-24T18:44:00.484185+0500 User 954448371 send /help command
+2021-08-24T18:44:09.493299+0500 User 954448371 click on "My profile" button
+2021-08-24T18:44:11.659812+0500 User 954448371 want to find an user
+2021-08-24T18:44:16.441362+0500 User 954448371 try to find user @cocksize_bot, but he can't
+2021-08-24T18:47:37.403226+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:47:47.217581+0500 User 625834898 click on "My profile" button
+2021-08-24T18:47:48.971211+0500 User 625834898 want to find an user
+2021-08-24T18:48:00.676636+0500 User 625834898 find user 625834898
+2021-08-24T18:48:02.938760+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:48:05.473038+0500 User 625834898 write a condition for deal
+2021-08-24T18:48:09.121745+0500 User 625834898 write a price for deal
+2021-08-24T18:48:10.906990+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:49:28.460712+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:49:40.063747+0500 User 625834898 want to find an user
+2021-08-24T18:49:41.363517+0500 User 625834898 find user 625834898
+2021-08-24T18:49:43.526676+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:49:45.477032+0500 User 625834898 write a condition for deal
+2021-08-24T18:49:46.226444+0500 User 625834898 write a price for deal
+2021-08-24T18:49:48.589921+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:50:27.796614+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:50:32.607676+0500 User 625834898 want to find an user
+2021-08-24T18:50:33.413285+0500 User 625834898 find user 625834898
+2021-08-24T18:50:35.128096+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:50:36.341424+0500 User 625834898 write a condition for deal
+2021-08-24T18:50:37.011225+0500 User 625834898 write a price for deal
+2021-08-24T18:50:38.882333+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:53:32.433674+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
+2021-08-24T18:53:44.773160+0500 User 625834898 click on "My profile" button
+2021-08-24T18:53:48.248214+0500 User 625834898 want to find an user
+2021-08-24T18:53:51.495327+0500 User 625834898 find user 625834898
+2021-08-24T18:53:54.004412+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:54:03.765887+0500 User 625834898 write a condition for deal
+2021-08-24T18:54:04.873505+0500 User 625834898 write a price for deal
+2021-08-24T18:54:06.401929+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:54:41.326972+0500 User 625834898 want to find an user
+2021-08-24T18:54:44.491986+0500 User 625834898 find user 625834898
+2021-08-24T18:54:46.457853+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:54:47.912272+0500 User 625834898 write a condition for deal
+2021-08-24T18:54:50.933684+0500 User 625834898 write a price for deal
+2021-08-24T18:54:52.392602+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:54:58.209743+0500 User 625834898 want to find an user
+2021-08-24T18:55:02.218454+0500 User 625834898 find user 625834898
+2021-08-24T18:55:04.519337+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:55:06.140527+0500 User 625834898 write a condition for deal
+2021-08-24T18:55:07.625792+0500 User 625834898 write a price for deal
+2021-08-24T18:55:08.987295+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T18:55:17.493467+0500 User 625834898 want to find an user
+2021-08-24T18:55:18.933466+0500 User 625834898 find user 625834898
+2021-08-24T18:55:22.483694+0500 User 625834898 want to offer a deal to 625834898
+2021-08-24T18:55:23.562021+0500 User 625834898 write a condition for deal
+2021-08-24T18:55:24.467253+0500 User 625834898 write a price for deal
+2021-08-24T18:55:25.997132+0500 User {msg.from_user.id} to send the offer a deal

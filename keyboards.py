@@ -32,21 +32,27 @@ def user_interaction(id_to):
 
     return user_interaction__kb
 
-def list_of_offers_of_deals_pending(id_to):
+def list_of_offers_of_deals_pending(id_to, current_page):
     offer_deal__cb = CallbackData('deal_offer_pending', 'id_deal')
+    pages__cb      = CallbackData('goto', 'page')
 
     list_of_offers = dq.list_of_offers_of_deals_pending(seller=id_to)
+    list_of_offers = [list_of_offers[i:i + 10] for i in range(0, len(list_of_offers), 10)]
 
-    """
-    looodp__buttons = []
+    pages = []
 
-    for i in list_of_offers:
-        if i == list_of_offers[-1]:
-            looodp__buttons.append([InlineKeyboardButton(text='🆕 #'+str(i[0]), callback_data=offer_deal__cb.new(id_deal=i[0]))])
-        else:
-            looodp__buttons.append([InlineKeyboardButton(text='#'+str(i[0]), callback_data=offer_deal__cb.new(id_deal=i[0]))])
+    for page in list_of_offers:
+        page_of_button = []
 
-    looodp__kb = InlineKeyboardMarkup(inline_keyboard=[button for button in looodp__buttons])
+        for button in page:
+            page_of_button.append([InlineKeyboardButton(text='#'+str(button[0]), callback_data=offer_deal__cb.new(id_deal=button[0]))])
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button])
 
-    return looodp__kb
-    """
+        if list_of_offers.index(page) == 0:
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='>>', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
+        elif list_of_offers.index(page) == len(list_of_offers)-1:
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='<<', callback_data=pages__cb.new(page=list_of_offers.index(page)-1))))
+        elif list_of_offers.index(page) != 0:
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='<<', callback_data=pages__cb.new(page=list_of_offers.index(page)-1)), InlineKeyboardButton(text='>>', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
+
+    return pages[current_page]

@@ -147,7 +147,7 @@ async def wait_commission(msg: types.Message, state: FSMContext):
         deal_data = await state.get_data()
         dq.create_deal(buyer=msg.from_user.id, seller=deal_data['seller'], condition=deal_data['condition'], price=deal_data['price'], commission=deal_data['commission'])
 
-        await bot.send_message(deal_data['seller'], messages.get('new_offer_deal'), reply_markup=keyboards.list_of_offers_of_deals_pending(deal_data['seller']))
+        await bot.send_message(deal_data['seller'], messages.get('new_offer_deal'), reply_markup=keyboards.list_of_offers_of_deals_pending(deal_data['seller'], 0))
 
         await States.main_menu.set()
 
@@ -185,6 +185,10 @@ async def inline_buttons(call: types.CallbackQuery, state: FSMContext):
         deal_info = dq.deal_info(id_deal=data[1])
 
         await call.message.edit_text(messages.get('deal_info', buyer=deal_info[1], condition=deal_info[4], price=deal_info[5], commission=deal_info[6]), parse_mode='MarkdownV2')
+    elif data[0] == 'goto':
+        deal_data = await state.get_data()
+
+        await call.message.edit_text(messages.get('new_offer_deal'), reply_markup=keyboards.list_of_offers_of_deals_pending(deal_data['seller'], int(data[1])))
 
 if __name__ == '__main__':
     executor.start_polling(dp)
