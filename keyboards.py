@@ -1,5 +1,6 @@
 from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.callback_data import CallbackData
+import database_queries as dq
 
 remove__kb = ReplyKeyboardRemove()
 back__kb = ReplyKeyboardMarkup(resize_keyboard=True).add(KeyboardButton('⬅️ Назад'))
@@ -30,3 +31,22 @@ def user_interaction(id_to):
     user_interaction__kb = InlineKeyboardMarkup().add(*user_interaction__buttons)
 
     return user_interaction__kb
+
+def list_of_offers_of_deals_pending(id_to):
+    offer_deal__cb = CallbackData('deal_offer_pending', 'id_deal')
+
+    list_of_offers = dq.list_of_offers_of_deals_pending(seller=id_to)
+
+    """
+    looodp__buttons = []
+
+    for i in list_of_offers:
+        if i == list_of_offers[-1]:
+            looodp__buttons.append([InlineKeyboardButton(text='🆕 #'+str(i[0]), callback_data=offer_deal__cb.new(id_deal=i[0]))])
+        else:
+            looodp__buttons.append([InlineKeyboardButton(text='#'+str(i[0]), callback_data=offer_deal__cb.new(id_deal=i[0]))])
+
+    looodp__kb = InlineKeyboardMarkup(inline_keyboard=[button for button in looodp__buttons])
+
+    return looodp__kb
+    """

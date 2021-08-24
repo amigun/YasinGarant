@@ -144,36 +144,47 @@ async def wait_commission(msg: types.Message, state: FSMContext):
         if user_status == 2:
             await bot.send_message(msg.from_user.id, messages.get('deal_is_formed'), reply_markup=keyboards.main_menu__kb_admin)
 
+        deal_data = await state.get_data()
+        dq.create_deal(buyer=msg.from_user.id, seller=deal_data['seller'], condition=deal_data['condition'], price=deal_data['price'], commission=deal_data['commission'])
+
+        await bot.send_message(deal_data['seller'], messages.get('new_offer_deal'), reply_markup=keyboards.list_of_offers_of_deals_pending(deal_data['seller']))
+
         await States.main_menu.set()
 
     if msg.text == '🎅 Продавец':
-        await state.update_data(commission='seller')
+        await state.update_data(commission=2)
 
         await send_message()
         log.info('User {msg.from_user.id} to send the offer a deal')
     elif msg.text == '🧑 Покупатель (я)':
-        await state.update_data(commission='buyer')
+        await state.update_data(commission=1)
 
         await send_message()
         log.info('User {msg.from_user.id} to send the offer a deal')
     elif msg.text == '👨‍❤️‍👨 Пополам':
-        await state.update_data(commission='bisect')
+        await state.update_data(commission=0)
 
         await send_message()
         log.info('User {msg.from_user.id} to send the offer a deal')
 
 @dp.callback_query_handler(lambda callback_query: True, state='*')
-async def inline_buttons(call: types.CallbackQuery):
+async def inline_buttons(call: types.CallbackQuery, state: FSMContext):
     await call.answer(cache_time=2)
 
     data = call.data.split(':')
 
     if data[0] == 'offer_deal':
+        await state.update_data(seller=data[1])
+
         await bot.delete_message(call.from_user.id, call.message.message_id-1)
         await call.message.edit_text(messages.get('write_condition'))
 
         await States.wait_condition.set()
         log.info(f'User {call.from_user.id} want to offer a deal to {data[1]}')
+    elif data[0] == 'deal_offer_pending':
+        deal_info = dq.deal_info(id_deal=data[1])
+
+        await call.message.edit_text(messages.get('deal_info', buyer=deal_info[1], condition=deal_info[4], price=deal_info[5], commission=deal_info[6]), parse_mode='MarkdownV2')
 
 if __name__ == '__main__':
     executor.start_polling(dp)
