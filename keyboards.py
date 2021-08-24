@@ -49,10 +49,10 @@ def list_of_offers_of_deals_pending(id_to, current_page):
         keyboard = InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button])
 
         if list_of_offers.index(page) == 0:
-            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='>>', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='➡️', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
         elif list_of_offers.index(page) == len(list_of_offers)-1:
-            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='<<', callback_data=pages__cb.new(page=list_of_offers.index(page)-1))))
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='⬅️', callback_data=pages__cb.new(page=list_of_offers.index(page)-1))))
         elif list_of_offers.index(page) != 0:
-            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='<<', callback_data=pages__cb.new(page=list_of_offers.index(page)-1)), InlineKeyboardButton(text='>>', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
+            pages.append(InlineKeyboardMarkup(inline_keyboard=[button for button in page_of_button]).add(InlineKeyboardButton(text='⬅️', callback_data=pages__cb.new(page=list_of_offers.index(page)-1)), InlineKeyboardButton(text='➡️', callback_data=pages__cb.new(page=list_of_offers.index(page)+1))))
 
     return pages[current_page]

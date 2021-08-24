@@ -601,3 +601,37 @@
 2021-08-24T18:55:23.562021+0500 User 625834898 write a condition for deal
 2021-08-24T18:55:24.467253+0500 User 625834898 write a price for deal
 2021-08-24T18:55:25.997132+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T21:09:05.609604+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:09:12.559000+0500 User 1204343862 click on "Help" button
+2021-08-24T21:09:13.702760+0500 User 1204343862 want to find an user
+2021-08-24T21:09:43.781947+0500 User 1204343862 send /admin command, but password is not true
+2021-08-24T21:09:46.858835+0500 User 1204343862 send /arbitr command, but password is not true
+2021-08-24T21:09:52.927492+0500 User 1204343862 try to find user /user, but he can't
+2021-08-24T21:09:55.710113+0500 User 1204343862 back to main menu
+2021-08-24T21:10:16.942547+0500 User 1204343862 want to find an user
+2021-08-24T21:10:26.492936+0500 User 1204343862 send /help command
+2021-08-24T21:10:32.592647+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:10:36.300946+0500 User 1204343862 want to find an user
+2021-08-24T21:10:38.511851+0500 User 1204343862 find user 1204343862
+2021-08-24T21:10:40.388946+0500 User 1204343862 want to offer a deal to 1204343862
+2021-08-24T21:10:40.936911+0500 User 625834898 want to find an user
+2021-08-24T21:10:42.565236+0500 User 625834898 find user 1204343862
+2021-08-24T21:10:44.783902+0500 User 625834898 want to offer a deal to 1204343862
+2021-08-24T21:10:44.927326+0500 User 1204343862 write a condition for deal
+2021-08-24T21:10:46.884956+0500 User 1204343862 write a price for deal
+2021-08-24T21:10:49.731409+0500 User 625834898 write a condition for deal
+2021-08-24T21:10:51.176364+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T21:10:51.816684+0500 User 625834898 write a price for deal
+2021-08-24T21:10:53.540619+0500 User {msg.from_user.id} to send the offer a deal
+2021-08-24T21:11:04.983857+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:11:22.773574+0500 User 1204343862 want to find an user
+2021-08-24T21:11:32.054469+0500 User 1204343862 send /help command
+2021-08-24T21:18:30.339092+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:18:31.955913+0500 User 1204343862 became an admin
+2021-08-24T21:18:35.580951+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:30:10.483378+0500 User 1204343862 want to find an user
+2021-08-24T21:30:23.502348+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:30:44.861646+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:48:36.439768+0500 User 1204343862 click on "My profile" button
+2021-08-24T21:48:38.198834+0500 User 1204343862 want to find an user
+2021-08-24T22:22:41.047138+0500 Launching the bot. Importing libraries, connect to DB and creating a log file
